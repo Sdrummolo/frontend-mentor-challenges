@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "header image" "content image" "content image" "content image" "content image";
+  grid-template-columns: 55% 45%;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas: "header" "image" "content";
+    grid-template-columns: auto;
+  }
+}
+
+.block {
+  display: block !important;
+}
+
+.content-container {
+  max-width: 36rem;
+  padding: 2rem;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  .content-container {
+    padding: 1.5rem;
+  }
+}
+
+#background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  z-index: -1;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  grid-area: header;
+}
+header .content-container {
+  display: flex;
+}
+header img {
+  margin-top: 3rem;
+}
+@media (max-width: 800px) {
+  header img {
+    width: 6rem;
+    margin-top: 0;
+  }
+}
+
+main {
+  grid-area: content;
+}
+@media (max-width: 800px) {
+  main {
+    text-align: center;
+  }
+}
+main h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.9rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+@media (max-width: 800px) {
+  main h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+main h1 span {
+  font-weight: 300;
+  color: #ce9797;
+  text-align: center;
+  letter-spacing: 1.1rem;
+}
+main h4 {
+  color: #ce9797;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+main form #input-container {
+  display: flex;
+  position: relative;
+}
+main form #error {
+  position: absolute;
+  right: 7rem;
+  top: 25%;
+  bottom: 50%;
+  z-index: 2;
+  display: none;
+}
+@media (max-width: 800px) {
+  main form #error {
+    right: 5rem;
+  }
+}
+main form input {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(206, 151, 151, 0.6);
+  outline: none;
+  background-color: transparent;
+}
+main form input::placeholder {
+  opacity: 0.6;
+  color: #ce9797;
+}
+main form .error {
+  border: 1px solid #f96262;
+}
+main form button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 6rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f8bfbf;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  -webkit-box-shadow: 0px 6px 30px -4px rgba(145, 85, 85, 0.86);
+  box-shadow: 0px 6px 30px -4px rgba(145, 85, 85, 0.86);
+  transition: all 0.3s;
+}
+main form button:hover {
+  -webkit-box-shadow: 0px 6px 30px 0px rgba(145, 85, 85, 0.86);
+  box-shadow: 0px 6px 30px 0px rgba(145, 85, 85, 0.86);
+}
+@media (max-width: 800px) {
+  main form button {
+    width: 4.2rem;
+  }
+}
+main form small {
+  margin: 0.5rem 1rem;
+  color: #f96262;
+  display: none;
+}
+@media (max-width: 800px) {
+  main form small {
+    text-align: left;
+  }
+}
+
+#image {
+  grid-area: image;
+  background-image: url("./images/hero-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+@media (max-width: 800px) {
+  #image {
+    max-height: 32vh;
+    background-image: url("./images/hero-mobile.jpg");
+    margin-bottom: 3rem;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+@media (max-width: 800px) {
+  footer {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

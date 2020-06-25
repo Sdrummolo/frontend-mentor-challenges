@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: #4c4e61;
+  line-height: 1.6;
+  min-height: 95vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding: 0 2rem;
+}
+
+header {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+header span {
+  font-weight: 200;
+}
+header h3 {
+  color: #a3a5ae;
+  margin-top: 2rem;
+  font-weight: 400;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: ". team-builder ." "supervisor team-builder calculator" "supervisor karma calculator" ". karma .";
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+@media (max-width: 900px) {
+  main {
+    grid-template-areas: "supervisor team-builder" "karma calculator";
+  }
+}
+@media (max-width: 576px) {
+  main {
+    grid-template-areas: "supervisor" "team-builder" "karma" "calculator";
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  max-width: 380px;
+  min-width: 250px;
+  position: relative;
+  box-shadow: 0px 0px 30px -8px rgba(76, 78, 97, 0.5);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px -3px rgba(76, 78, 97, 0.2);
+}
+.card .border {
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+.card h2 {
+  margin-bottom: 1rem;
+}
+.card p {
+  color: #a3a5ae;
+}
+.card img {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+#card-1 {
+  grid-area: supervisor;
+}
+#card-1 .border {
+  background-color: #45d3d3;
+}
+
+#card-2 {
+  grid-area: team-builder;
+}
+#card-2 .border {
+  background-color: #ea5353;
+}
+
+#card-3 {
+  grid-area: karma;
+}
+#card-3 .border {
+  background-color: #549ef2;
+}
+
+#card-4 {
+  grid-area: calculator;
+}
+#card-4 .border {
+  background-color: #fcaf4a;
+}
+
+footer {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

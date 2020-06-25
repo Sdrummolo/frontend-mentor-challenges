@@ -1,0 +1,222 @@
+// Colors
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$blue: hsl(248, 32%, 49%);
+$dark-blue: hsl(249, 10%, 26%);
+$gray-blue: hsl(246, 25%, 77%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: $red;
+  color: #fff;
+  background-image: url(./images/bg-intro-desktop.png);
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 1020px) {
+    background-image: url("./images/bg-intro-mobile.png");
+    background-position: center;
+    background-size: cover;
+    font-size: 14px;
+  }
+}
+
+// Utilitles
+.container {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    padding: 12.5px;
+    max-width: 375px;
+    justify-content: inherit;
+  }
+}
+
+header {
+  align-self: center;
+  width: 50%;
+  max-width: 524px;
+  min-width: 524px;
+  padding: 1rem;
+
+  @media (max-width: 1020px) {
+    width: 100%;
+    min-width: auto;
+    max-width: auto;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+
+    @media (max-width: 1020px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  p {
+    @media (max-width: 1020px) {
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+  }
+}
+
+#form-container {
+  align-self: center;
+  width: 50%;
+  min-width: 450px;
+  max-width: 450px;
+  padding: 1rem;
+
+  @media (max-width: 1020px) {
+    width: 100%;
+    min-width: 350px;
+    max-width: 350px;
+    padding: 0;
+  }
+
+  & > div {
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-color: $blue;
+    padding: 1rem;
+    outline: none;
+    margin-bottom: 1.5rem;
+    -webkit-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-bottom: 1.3rem;
+    font-size: 0.8rem;
+    text-align: center;
+
+    @media (max-width: 1020px) {
+      padding: 1rem 5rem;
+      line-height: 1.8;
+      font-size: 0.9rem;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+
+  button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-color: $green;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba($green, 0.8);
+    }
+  }
+
+  & > small {
+    width: 100%;
+    color: $gray-blue;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 0.6rem;
+
+    @media (max-width: 1020px) {
+      max-width: 80%;
+      margin: 0.6rem auto auto auto;
+    }
+
+    span {
+      color: $red;
+      font-weight: 700;
+    }
+  }
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    position: relative;
+
+    input {
+      padding: 1rem 1.5rem;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid $gray-blue;
+      margin: 0 0 1.2rem;
+      color: $dark-blue;
+
+      &:focus {
+        border: 1px solid $dark-blue;
+      }
+
+      &::placeholder {
+        font-weight: 600;
+      }
+
+      &.error {
+        border: 2px solid $red;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 1.5rem;
+      top: 0.7rem;
+      display: none;
+    }
+  }
+
+  small {
+    color: $red;
+    font-size: 11px;
+    margin-top: -0.4rem;
+    margin-bottom: 0.6rem;
+    align-self: flex-end;
+    font-style: italic;
+    display: none;
+
+    &.error {
+      display: block;
+    }
+  }
+}

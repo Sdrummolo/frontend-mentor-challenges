@@ -1,0 +1,158 @@
+// Variables:
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$dark-blue: hsl(234, 12%, 34%);
+$gray-blue: hsl(229, 6%, 66%);
+$light-grey: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+  background-color: $light-grey;
+  color: $dark-blue;
+  line-height: 1.6;
+  min-height: 95vh;
+  position: relative;
+}
+
+// Utilitles
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  padding: 0 2rem;
+}
+
+// Main styling
+header {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+
+  span {
+    font-weight: 200;
+  }
+
+  h3 {
+    color: $gray-blue;
+    margin-top: 2rem;
+    font-weight: 400;
+  }
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    ". team-builder ."
+    "supervisor team-builder calculator"
+    "supervisor karma calculator"
+    ". karma .";
+  gap: 2rem;
+  padding-bottom: 6rem;
+
+  @media (max-width: 900px) {
+    grid-template-areas:
+      "supervisor team-builder"
+      "karma calculator";
+  }
+
+  @media (max-width: 576px) {
+    grid-template-areas:
+      "supervisor"
+      "team-builder"
+      "karma"
+      "calculator";
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  max-width: 380px;
+  min-width: 250px;
+  position: relative;
+  box-shadow: 0px 0px 30px -8px rgba(76, 78, 97, 0.5);
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px -3px rgba(76, 78, 97, 0.2);
+  }
+
+  .border {
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $gray-blue;
+  }
+
+  img {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+#card-1 {
+  grid-area: supervisor;
+
+  .border {
+    background-color: $cyan;
+  }
+}
+
+#card-2 {
+  grid-area: team-builder;
+
+  .border {
+    background-color: $red;
+  }
+}
+
+#card-3 {
+  grid-area: karma;
+
+  .border {
+    background-color: $blue;
+  }
+}
+
+#card-4 {
+  grid-area: calculator;
+
+  .border {
+    background-color: $orange;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #e5eff5;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla";
+  color: #fff;
+  line-height: 1.4;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  min-height: 100vh;
+}
+
+.section-container {
+  padding: 2.5rem;
+  height: 100%;
+  display: grid;
+}
+@media (max-width: 700px) {
+  .section-container {
+    padding: 1.8rem;
+  }
+}
+
+main {
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  align-self: center;
+  display: grid;
+  grid-template-areas: "head head" "signUp about";
+  grid-template-rows: 0.8fr 0.8fr;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 700px) {
+  main {
+    grid-template-areas: "head" "signUp" "about";
+    grid-template-rows: 1fr 0.8fr 0.8fr;
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin-bottom: 3rem;
+    margin-top: 0;
+  }
+}
+
+#header {
+  grid-area: head;
+}
+#header h1 {
+  color: #2ab2af;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+@media (max-width: 700px) {
+  #header h1 {
+    font-size: 1.4rem;
+  }
+}
+#header h2 {
+  color: #c0df34;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 700px) {
+  #header h2 {
+    font-size: 1.1rem;
+  }
+}
+#header h4 {
+  color: #98a6bd;
+  line-height: 2;
+}
+@media (max-width: 700px) {
+  #header h4 {
+    font-size: 0.9rem;
+  }
+}
+
+#sign-up {
+  background-color: #2ab2af;
+  border-radius: 0 0 0 10px;
+  grid-area: signUp;
+}
+#sign-up .section-container {
+  display: grid;
+}
+@media (max-width: 700px) {
+  #sign-up {
+    border-radius: 0;
+  }
+}
+#sign-up #price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+#sign-up #price-container span {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+#sign-up #price-container h4 {
+  opacity: 0.5;
+}
+#sign-up .description {
+  margin-bottom: 1.5rem;
+}
+#sign-up button {
+  width: 100%;
+  border: none;
+  color: #fff;
+  background-color: #c0df34;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.1rem;
+  align-self: end;
+  transition: all 0.2s;
+}
+#sign-up button:hover {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.015);
+}
+
+#about {
+  background-color: #45d3d1;
+  border-radius: 0 0 10px 0;
+  grid-area: about;
+}
+@media (max-width: 700px) {
+  #about {
+    border-radius: 0 0 10px 10px;
+  }
+}
+#about .section-title {
+  margin-bottom: 1rem;
+}
+#about p {
+  line-height: 1.4;
+  font-size: 0.9hhrem;
+  opacity: 0.7;
+  align-self: end;
+}
+
+footer {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  color: #000;
+}
+@media (max-width: 700px) {
+  footer {
+    bottom: 1rem;
+  }
+}
+footer .attribution {
+  font-size: 11px;
+  bottom: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
