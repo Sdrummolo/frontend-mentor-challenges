@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  background-color: #0c122c;
+  background-image: url("./images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+@media (max-width: 500px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.container {
+  height: 100%;
+  padding: 1rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
+
+#nav-container {
+  background-color: #1d2c67;
+  padding: 2.5rem;
+  border-radius: 10px 90px 10px 10px;
+  min-height: 200px;
+  max-height: 200px;
+  min-width: 350px;
+  max-width: 350px;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 950px) {
+  #nav-container {
+    margin-right: 0;
+    min-width: 327px;
+    max-width: 327px;
+  }
+}
+#nav-container > img {
+  align-self: flex-start;
+}
+#nav-container nav {
+  display: flex;
+}
+#nav-container nav > div {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.8rem;
+  min-width: 49.59px;
+  background-color: #0c122c;
+  margin-right: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#nav-container nav > div a {
+  margin: auto;
+}
+#nav-container nav > div img {
+  max-height: 20px;
+}
+
+#progress-bar-container {
+  background-color: #1d2c67;
+  border-radius: 10px;
+  padding: 2.5rem;
+  min-height: 150px;
+  max-height: 150px;
+  min-width: 540px;
+  max-width: 540px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media (max-width: 950px) {
+  #progress-bar-container {
+    min-height: 180px;
+    max-height: 180px;
+    min-width: 327px;
+    max-width: 327px;
+  }
+}
+#progress-bar-container p {
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: #dddbff;
+}
+#progress-bar-container p span {
+  font-weight: 700;
+  color: #fff;
+}
+#progress-bar-container #progress-bar {
+  height: 18px;
+  background-color: rgba(12, 18, 44, 0.5);
+  border-radius: 30px;
+}
+@media (max-width: 950px) {
+  #progress-bar-container #progress-bar {
+    margin-bottom: 0.7rem;
+  }
+}
+#progress-bar-container #progress-bar #progress-bar-overlay {
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 18px;
+  width: 81.5%;
+  border-radius: 30px;
+  position: relative;
+}
+#progress-bar-container #progress-bar #progress-bar-overlay > div {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  right: 2px;
+  top: 2px;
+  background-color: #fff;
+  z-index: 100;
+}
+#progress-bar-container #data-limits {
+  justify-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+#progress-bar-container #data-limits span {
+  font-size: 0.7rem;
+}
+@media (max-width: 950px) {
+  #progress-bar-container #data-limits {
+    margin-top: 0;
+  }
+}
+#progress-bar-container #data-left {
+  position: absolute;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  right: 2.5rem;
+  bottom: 8rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 950px) {
+  #progress-bar-container #data-left {
+    bottom: -2.2rem;
+    right: 25%;
+  }
+}
+#progress-bar-container #data-left h2 {
+  display: flex;
+  align-items: center;
+}
+#progress-bar-container #data-left span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #848794;
+  margin-left: 0.5rem;
+  letter-spacing: 1px;
+}
+#progress-bar-container #balloon-tip {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 6.7rem;
+  width: 0;
+  height: 0;
+  border-top: 2rem solid #fff;
+  border-left: 2rem solid transparent;
+}
+@media (max-width: 950px) {
+  #progress-bar-container #balloon-tip {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
