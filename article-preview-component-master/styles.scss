@@ -1,0 +1,207 @@
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-grayish-blue;
+
+  @media (max-width: 780px) {
+    align-items: flex-start;
+  }
+}
+
+article {
+  display: flex;
+  max-height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+    max-height: auto;
+    max-width: 350px;
+    margin-top: 10rem;
+  }
+}
+
+#image {
+  background-image: url("./images/drawers.jpg");
+  background-position: center left;
+  background-size: cover;
+  width: 300px;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+
+  @media (max-width: 780px) {
+    min-height: 250px;
+    max-height: 250px;
+    width: auto;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+#content {
+  min-width: 450px;
+  max-width: 450px;
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 0 10px 10px 0;
+
+  @media (max-width: 780px) {
+    min-width: auto;
+    max-width: auto;
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: $very-dark-grayish-blue;
+
+    @media (max-width: 780px) {
+      font-size: 1.1rem;
+      padding: 2.5rem 2rem 0 2rem;
+    }
+  }
+
+  & > p {
+    line-height: 1.7;
+    color: $desaturated-dark-blue;
+    margin-bottom: 1.3rem;
+
+    @media (max-width: 780px) {
+      padding: 0 2rem;
+    }
+  }
+
+  #author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (max-width: 780px) {
+      padding: 1rem 2rem;
+    }
+
+    #infos {
+      display: flex;
+      align-items: center;
+
+      & > img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      #details {
+        #name {
+          color: $very-dark-grayish-blue;
+          font-weight: 700;
+          margin-bottom: 0.2rem;
+        }
+
+        #date {
+          font-size: 0.8rem;
+          color: $grayish-blue;
+        }
+      }
+    }
+
+    button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 50%;
+      background-color: $light-grayish-blue;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    #share-menu {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 4rem;
+      margin-right: -107.5px;
+      background-color: $very-dark-grayish-blue;
+      padding: 1rem 2.3rem;
+      border-radius: 10px;
+      display: none;
+
+      &.open {
+        display: block;
+      }
+
+      @media (max-width: 780px) {
+        right: 0;
+        bottom: 0;
+        margin-right: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        padding: 0 2rem;
+      }
+
+      #share-menu-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        p {
+          text-transform: uppercase;
+          color: $grayish-blue;
+          letter-spacing: 3px;
+          margin-right: 0.5rem;
+
+          @media (max-width: 780px) {
+            font-size: 0.9rem;
+          }
+        }
+
+        #socials {
+          display: flex;
+          align-items: center;
+
+          a {
+            display: block;
+            margin: 0 0.5rem;
+          }
+        }
+
+        #baloon-tip {
+          position: absolute;
+          top: 2.3rem;
+          width: 0;
+          height: 0;
+          left: 50%;
+          margin-left: -12px;
+          border-left: 12px solid transparent;
+          border-right: 12px solid transparent;
+          border-top: 15px solid $very-dark-grayish-blue;
+
+          @media (max-width: 780px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
